@@ -1,0 +1,89 @@
+button:focus {
+  outline: none;
+}
+
+.weather-container {
+  width: 66%;
+  margin: 2rem auto;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.weather-container > div {
+  padding: 15px 20px;
+}
+
+.weather-city {
+  margin: 0.5rem 0;
+}
+
+.weather-temperature {
+  display: block;
+  clear: both;
+}
+
+.weather-condition-container {
+  flex-basis: 25%;
+  text-align: center;
+  font-size: 1.2rem;
+  display: flex;
+  flex-flow: column wrap;
+  border-right: 1px solid #cdcdcd;
+}
+
+
+.weather-icon {
+  display: block;
+  width: 60%;
+  margin: 1rem auto;
+}
+
+.weather-description {
+  display: block;
+}
+
+.weather-detail-container {
+  flex-basis: 75%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.weather-detail {
+  flex: 1;
+  text-align: center;
+}
+
+.weather-detail img, .weather-detail-span {
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.weather-detail-span {
+  line-height: 40px;
+  font-size: 1.1rem;
+}
+
+.weather-detail p {
+  color: rgba(0,0,0,0.75);
+}
+
+.weather-option-container {
+  margin: 0.3rem auto;
+  text-align: center;
+}
+
+.weather-option-container button {
+  border: none;
+  background-color: #565656;
+  color: #ededed;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.weather-option-container button:hover {
+  background-color: #636363;
+}

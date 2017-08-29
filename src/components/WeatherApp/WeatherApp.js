@@ -71,6 +71,8 @@ class WeatherApp extends Component {
     const windArrowStyle = {
       transform: `rotate(${data.wind.deg - 90}deg)`
     }
+    let temp = data.main.temp.toString();
+    temp = parseInt(temp);
 
     return (
       <div className="WeatherApp">
@@ -83,7 +85,7 @@ class WeatherApp extends Component {
           </div>
           <div className="weather-detail-container">
             <div className="weather-detail weather-detail-temperature">
-              <span className="weather-detail-span">{data.main.temp}° {this.state.units === 'metric' ? 'C' : 'F'}</span>
+              <span className="weather-detail-span">{temp}° {this.state.units === 'metric' ? 'C' : 'F'}</span>
               <p>Temperature</p>
             </div>
             <div className="weather-detail">

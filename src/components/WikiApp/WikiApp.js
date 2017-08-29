@@ -25,7 +25,8 @@ class WikiApp extends Component {
 
   getWikipediaEntries(ev) {
     ev.preventDefault();
-    const searchQuery = this.state.searchQuery
+    const searchQuery = this.state.searchQuery;
+    if (!searchQuery) {return}
     axios.get('https://en.wikipedia.org/w/api.php', {
       params: {
         action: 'query',

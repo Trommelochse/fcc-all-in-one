@@ -29,10 +29,7 @@ class WeatherApp extends Component {
       });
     }
     else {
-      axios.get('http://ip-api.com/json')
-      .then(response => {
-        // const info = response.data;
-      });
+      window.location = 'http://www.google.com'
     }
   }
 

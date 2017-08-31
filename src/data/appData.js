@@ -24,14 +24,11 @@ export const apps = [
     description: 'Search for Wikipedia articles using a simple GUI',
     thumbUrl: 'http://clemensjanes.com/fcc-project/img/thumb-wiki.jpg'
   },
+  {
+    name: 'twitch',
+    title: 'Twitch App',
+    subtitle: 'Keep an eye on your favorite Twitch Streamers',
+    description: 'Keep an eye on your favorite Twitch Streamers, wherever you are!',
+    thumbUrl: 'http://clemensjanes.com/fcc-project/img/thumb-twitch.jpg'
+  }
 ]
-
-/*
-const future =
-{
-  name: 'twitch',
-  title: 'Twitch App',
-  subtitle: 'See my favorite streamers below',
-  thumbUrl: 'http://clemensjanes.com/fcc-project/img/thumb-twitch.jpg'
-}
-*/

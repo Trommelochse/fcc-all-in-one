@@ -3,7 +3,6 @@ import Heading from '../Heading.js';
 import Streamer from './components/Streamer.js'
 
 import axios from 'axios';
-import * as utils from './utils/utils.js';
 
 import './TwitchApp.css';
 
@@ -12,7 +11,7 @@ class TwitchApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      favorites: ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]
+      favorites: ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "habathcx", "RobotCaleb", "noobs2ninjas"]
     };
     this.renderStreamers = this.renderStreamers.bind(this);
   }
@@ -24,7 +23,7 @@ class TwitchApp extends Component {
 
   getData() {
     const client_id = '2utooqesurkoi3fe9dkg2nmxlc2fjh'
-    const channels = [];
+    let channels = [];
     function getChannel(name) {
        return axios.get('https://api.twitch.tv/kraken/channels/' + name, {params: {client_id}})
     };
@@ -34,7 +33,16 @@ class TwitchApp extends Component {
 
     for (let i=0; i<this.state.favorites.length; i++) {
       const name = this.state.favorites[i];
-      const channel = utils.getChannel(name);
+      axios.all([getChannel(name), getStream(name)])
+        .then(([channel, stream]) => {
+          channel = channel.data;
+          channel.stream = stream.data.stream;
+          channels.push(channel);
+          // set State if all data has been received
+          if (channels.length === this.state.favorites.length) {
+            this.setState({channels});
+          }
+        });
     }
   }
 
@@ -46,7 +54,7 @@ class TwitchApp extends Component {
     if (!this.state.channels) {return null}
     return (
       <div className="streamer-container">
-        {this.state.channels.map(channel => <Streamer />)}
+        {this.state.channels.map(channel => <Streamer {...channel} key={channel._id}/>)}
       </div>
     )
 

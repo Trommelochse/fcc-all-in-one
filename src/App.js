@@ -7,6 +7,7 @@ import QuoteApp from './components/QuoteApp/QuoteApp.js';
 import WeatherApp from './components/WeatherApp/WeatherApp.js';
 import WikiApp from './components/WikiApp/WikiApp.js';
 import TwitchApp from './components/TwitchApp/TwitchApp.js';
+import CalculatorApp from './components/CalculatorApp/CalculatorApp.js';
 
 import * as appData from './data/appData.js'
 
@@ -24,6 +25,7 @@ class App extends Component {
         <Route exact path='/weather' component={WeatherApp} />
         <Route exact path='/wiki' component={WikiApp} />
         <Route exact path='/twitch' component={TwitchApp} />
+        <Route exact path='/calculator' component={CalculatorApp} />
         <Footer />
       </div>
     );

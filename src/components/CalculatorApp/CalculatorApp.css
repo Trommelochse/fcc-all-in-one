@@ -1,0 +1,65 @@
+h1,h2,h3,h4,h4,h5,p {
+  margin: 0;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.CalculatorApp {
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+.Display {
+  text-align: right;
+}
+
+.Display__main {
+  height: 90px;
+  padding: 20px 0 5px;
+  font-size: 2em;
+  line-height: 65px;
+}
+
+.Display__calculation {
+  height: 30px;
+  padding: 5px 0;
+  font-size: 1.2em;
+  line-height: 20px;
+}
+
+.NumberContainer {
+  width: 300px;
+  float: left;
+}
+
+.OperatorContainer {
+  width: 100px;
+  float: left;
+  display: flex;
+  flex-flow: column;
+}
+
+.NumberContainer button, .OperatorContainer button, .OptionContainer button  {
+  display: block;
+  float: left;
+  width: 100px;
+  height: 80px;
+  font-size: 1.5em;
+}
+
+.NumberContainer button.btn-zero {
+  width: 200px;
+}
+
+#btn-equal {
+  display: block;
+  float: right;
+  width: 200px;
+  height: 80px;
+  margin-top: 20px;
+  font-size: 4em;
+}

@@ -1,27 +1,24 @@
-h1,h2,h3,h4,h4,h5,p {
-  margin: 0;
-}
-
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
-}
 .CalculatorApp {
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
 }
 
-
 .Display {
   text-align: right;
+  color: #27ae60;
+  background-color: #3e3e3e;
+}
+
+.Display p {
+  margin: 0;
 }
 
 .Display__main {
-  height: 90px;
-  padding: 20px 0 5px;
   font-size: 2em;
-  line-height: 65px;
+  line-height: 55px;
+  padding: 0 0.8rem;
+  overflow: hidden;
+  border-bottom: 1px solid #6d6d6d;
 }
 
 .Display__calculation {
@@ -29,30 +26,32 @@ h1,h2,h3,h4,h4,h5,p {
   padding: 5px 0;
   font-size: 1.2em;
   line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .NumberContainer {
-  width: 300px;
+  width: calc(300px / 4*3);
   float: left;
 }
 
 .OperatorContainer {
-  width: 100px;
+  width: calc(300px/4);
   float: left;
   display: flex;
   flex-flow: column;
 }
 
 .NumberContainer button, .OperatorContainer button, .OptionContainer button  {
+  border: 1px solid #d1d1d1;
   display: block;
   float: left;
-  width: 100px;
-  height: 80px;
+  width: calc(300px/4);
+  height: 60px;
   font-size: 1.5em;
-}
-
-.NumberContainer button.btn-zero {
-  width: 200px;
+  background: #7f8c8d;
+  color: #fff;
+  cursor: pointer;
 }
 
 #btn-equal {
@@ -62,4 +61,19 @@ h1,h2,h3,h4,h4,h5,p {
   height: 80px;
   margin-top: 20px;
   font-size: 4em;
+  border: 1px solid #d1d1d1;
+  background: #7f8c8d;
+  cursor: pointer;
+}
+
+.NumberContainer button:hover, .OperatorContainer button:hover, .OptionContainer button:hover, #btn-equal:hover {
+  background: #34495e;
+}
+
+.NumberContainer button.btn-zero {
+  width: calc(300px/2);
+}
+
+@media (max-width: 768px) {
+
 }

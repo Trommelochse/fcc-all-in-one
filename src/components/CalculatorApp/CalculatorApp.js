@@ -111,7 +111,7 @@ class CalculatorApp extends Component {
   render() {
     return (
       <div className="CalculatorApp clearfix">
-        <h2 className="app-title">Local Weather App</h2>
+        <h2 className="app-title">Calculator App</h2>
         <Display
           currentNumber={this.state.currentNumber}
           calculation={this.state.calculation}

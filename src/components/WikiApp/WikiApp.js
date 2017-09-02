@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Heading from '../Heading.js';
 import WikiResult from './components/WikiResult.js';
 
 import axios from 'axios';

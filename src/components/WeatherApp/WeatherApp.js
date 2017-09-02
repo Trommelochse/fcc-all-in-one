@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Heading from '../Heading.js';
 
 import axios from 'axios';
 import * as utils from './utils/utils.js'

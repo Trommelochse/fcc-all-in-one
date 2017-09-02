@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Heading from '../Heading.js';
 import Streamer from './components/Streamer.js'
 
 import axios from 'axios';

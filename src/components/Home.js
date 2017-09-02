@@ -16,7 +16,7 @@ const Home = (props) => {
       <div className="info-container">
         <hr />
         <h3>Source:</h3>
-        <a href="/" className="github-link">
+        <a href="https://github.com/Trommelochse/fcc-all-in-one" className="github-link" target="_blank" rel="noopener noreferrer">
           <i className="ion-social-github"></i>
         </a>
       </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Heading from '../Heading.js';
 
 import axios from 'axios';
 
@@ -33,7 +32,7 @@ class QuoteApp extends Component {
 
     return (
       <div className="QuoteApp">
-        <Heading title="Random Quote Generator" subtitle="Great Quotes from Great People" />
+        <h2 className="app-title">Quote App</h2>
         <div className="quote-container">
           <div className="quote-content">
             <blockquote>{ quote.quote }</blockquote>

@@ -1,18 +1,28 @@
 import React from 'react';
 import AppBox from './AppBox.js';
-import Heading from './Heading.js';
 
 import * as appData from '../data/appData.js'
 
 const Home = (props) => {
   return (
     <div className="Home">
-      <Heading title="FCC-in-ONE" subtitle="All FCC Front End Projects in one React Single Page Application" />
-      <div className="app-box-container">
+      <h2 className="app-title">App Overview:</h2>
+      <div className="app-box-container clearfix">
         { appData.apps.map(app => {
           if (app.name === 'home') { return null }
           return (<AppBox key={app.name} {...app} />);
         }) }
+      </div>
+      <div className="info-container">
+        <hr />
+        <h3>Source:</h3>
+        <a href="/" className="github-link">
+          <i className="ion-social-github"></i>
+        </a>
+      </div>
+      <div className="info-container">
+        <h3>Apps comleted:</h3>
+        <span>{appData.apps.length -1}</span>
       </div>
     </div>
   )

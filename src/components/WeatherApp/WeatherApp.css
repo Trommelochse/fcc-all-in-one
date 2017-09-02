@@ -7,7 +7,7 @@ button:focus {
   margin: 2rem auto;
   background-color: #fff;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
@@ -47,7 +47,7 @@ button:focus {
 .weather-detail-container {
   flex-basis: 75%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
 }
 
@@ -78,12 +78,22 @@ button:focus {
 
 .weather-option-container button {
   border: none;
-  background-color: #565656;
-  color: #ededed;
+  background-color: #bdc3c7;
+  color: #34495e;
   padding: 8px 12px;
   cursor: pointer;
 }
 
 .weather-option-container button:hover {
-  background-color: #636363;
+  background-color: #95a5a6;
+}
+
+@media (max-width: 768px) {
+  .weather-condition-container  {
+    flex-basis: 40%;
+  }
+  .weather-detail-container {
+    flex-basis: 60%;
+    flex-flow: column wrap;
+  }
 }

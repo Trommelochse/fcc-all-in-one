@@ -64,7 +64,7 @@ class TwitchApp extends Component {
 
     return (
       <div className="TwitchApp">
-        <Heading title="Twitch Streamer App" subtitle="Keep an overview of your favorite Twitch streamers" />
+        <h2 className="app-title">Twitch Streamer App</h2>
         { this.renderStreamers() }
       </div>
     );

@@ -13,11 +13,6 @@
   transition: all 175ms;
 }
 
-.Streamer:hover img {
-  /*border: 1px solid orangered;
-  transform: translateX(-5px);*/
-}
-
 .streamer-logo {
   flex: 2;
 }
@@ -29,7 +24,7 @@
   flex: 10;
   display: flex;
   align-items: center;
-  text-decoration: underline;
+  font-weight: 600;
 }
 
 .streamer-status {
@@ -43,8 +38,7 @@
 
 .streamer-option {
   flex: 1;
-  background-color: #3a3a3a;
-  /*border-left: 1px solid #cdcdcd;*/
+  background-color: #2ecc71;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,13 +47,27 @@
 .streamer-option i {
   display: inline-block;
   font-size: 1.4rem;
-  color: #dadada;
+  color: #545445;
 }
 
 .streamer-option i.fa-eye-slash {
-  opacity: 0.5;
+  opacity: 0.15;
 }
 
 .streamer-option i.fa-eye:hover {
-  color: #edffed;
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .streamer-name {
+    flex: 4 1;
+  }
+  .streamer-status {
+    flex: 3 1;
+    font-size: 1rem;
+  }
+  .streamer-option {
+    flex: 2 1;
+  }
+
 }

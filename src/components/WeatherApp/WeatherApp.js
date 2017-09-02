@@ -76,7 +76,7 @@ class WeatherApp extends Component {
 
     return (
       <div className="WeatherApp">
-        <Heading title="Local Weather" subtitle="Check the current weather at your position" />
+        <h2 className="app-title">Local Weather App</h2>
         <div className="weather-container">
           <div className="weather-condition-container">
             <h3 className="weather-city">{data.name}</h3>

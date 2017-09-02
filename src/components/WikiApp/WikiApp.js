@@ -63,7 +63,7 @@ class WikiApp extends Component {
 
     return (
       <div className="WikiApp">
-        <Heading title="Wikipedia Viewer" subtitle="" />
+        <h2 className="app-title">Wikipedia App</h2>
         <div className="wiki-container">
           <form className="wiki-search-container" onSubmit={this.getWikipediaEntries}>
             <input

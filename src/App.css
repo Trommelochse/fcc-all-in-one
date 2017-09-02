@@ -1,3 +1,9 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,10 +12,36 @@ body {
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: #efefef;
   color: #212121;
+  min-height: 90vh;
+}
+
+footer {
+  margin-top: 3rem;
+  min-height: 3rem;
+  background: #7f8c8d;
+  opacity: 0.5;
+  display: flex;
+}
+
+footer p {
+  margin: auto;
+  text-align: center;
 }
 
 h1,h2,h3,h4,h5 {
   font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  color: #ecf0f1;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px
+}
+
+p {
+  margin: 0.4em 0;
 }
 
 a {
@@ -17,23 +49,72 @@ a {
   color: inherit;
 }
 
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
+button {
+  font-family: 'Roboto', Helvetica, sans-serif;
 }
+
 
 .App {
   width: 920px;
   margin: 0 auto;
+  margin-top: 60px;
 }
 
-.Heading {
+.Navbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: 60px;
+  padding: 0.5rem 0;
+}
+
+.QuoteApp, .WeatherApp, .WikiApp, .TwitchApp {
+  min-height: 80vh;
+  margin-bottom: 5rem;
+}
+
+.navbar-home {
+  position: absolute;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #27ae60;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.navbar-home:hover {
+  color:  #f39c12; 
+}
+
+.navbar-home > * {
+  display: block;
+}
+
+.navbar-home i {
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+
+.navbar-title {
+  width: 920px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
   text-align: center;
 }
 
-.app-box-container {
+.navbar-title h1 {
+  flex:1;
+}
 
+h2.app-title {
+  text-align: center;
+  margin: 0;
+  line-height: 5rem;
 }
 
 .AppBox {
@@ -45,16 +126,10 @@ a {
   border-radius: 2px;
   overflow: hidden;
   box-shadow: 2px 3px 2px rgba(0,0,0,0.5);
-  transition: box-shadow .175s;
-}
-
-.AppBox:hover .app-box-background {
-  transform: scale(1.04);
-  opacity: 0.65;
 }
 
 .AppBox:hover .app-box-description {
-  opacity: 1;
+  transform: translateY(0px);
 }
 
 .AppBox:hover .app-box-title {
@@ -71,17 +146,18 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 1;
-  transition: transform 120ms, opacity 400ms;
 }
 
 .app-box-description {
-  position: relative;
+  position: absolute;
+  transform: translateY(-210px);
   z-index: 1;
   height: 210px;
   padding: 30px 20px;
-  opacity: 0;
-  transition: opacity 120ms;
+  background: #2980b9;
+  color: #fff;
+  opacity: 0.95;
+  transition: transform 200ms;
 }
 
 .app-box-description p {
@@ -109,31 +185,69 @@ a {
   line-height: 40px;
 }
 
-.HomeLip {
-  display: flex;
-  position: fixed;
-  bottom: -55px;
-  width: 60px;
-  height: 110px;
-  font-size: 1.5rem;
-  padding-top: 1rem;
-  background-color: #fff;
-  border-radius: 30px;
-  color: #232323;
-  box-shadow: -1px -1px 1px rgba(0,0,0,0.3);
-  justify-content: center;
-  transition: all 225ms;
+.info-container {
+  text-align: center;
 }
 
-.HomeLip:hover {
-  transform: translateY(-8px);
-  background-color: rgba(0,0,0,0.7);
-  color: #fff;
+.info-container h3 {
+  font-size: 1.9rem;
+  margin: 0.5em 0;
+  color: rgba(0,0,0,0.75);
+  font-weight: 300;
+}
+
+.info-container i, .info-container span {
+  font-size: 2.4rem;
+}
+
+.info-container > span, .info-container > a {
+  display: block;
+}
+
+.github-link {
+  text-align: center;
+}
+
+
+.Heading {
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .AppBox {
+    margin: 5%;
+    width: calc(80%/2);
+  }
 }
 
 
 @media (max-width: 768px) {
-  .App, .quote-container {
+
+  .App, .navbar-title, .quote-container, .weather-container, .wiki-container {
     width: 100%;
+  }
+
+  .App {
+    padding-top: 5rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-home {
+    position: relative;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .AppBox {
+    margin: 5% 10%;
+    width: 80%;
+  }
+  .QuoteApp, .WeatherApp, .WikiApp, .TwitchApp {
+    min-height: 60vh;
+    margin-bottom: 3rem;
   }
 }

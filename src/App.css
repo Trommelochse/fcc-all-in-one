@@ -70,9 +70,28 @@ button {
   padding: 0.5rem 0;
 }
 
-.QuoteApp, .WeatherApp, .WikiApp, .TwitchApp {
+.Loader, .QuoteApp, .WeatherApp, .WikiApp, .TwitchApp {
   min-height: 80vh;
   margin-bottom: 5rem;
+}
+
+.Loader {
+  min-height: 40vh;
+  text-align: center;
+  display: flex;
+}
+
+.Loader > div {
+  margin: auto;
+}
+
+.spinner {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 4px solid #000;
+  animation: rotate 1.25s linear infinite, border-color-change 2s linear infinite;
+  margin-bottom: 1.5rem;
 }
 
 .navbar-home {
@@ -110,6 +129,8 @@ button {
 .navbar-title h1 {
   flex:1;
 }
+
+
 
 h2.app-title {
   text-align: center;
@@ -212,11 +233,6 @@ h2.app-title {
   text-align: center;
 }
 
-
-.Heading {
-  text-align: center;
-}
-
 @media (max-width: 960px) {
   .AppBox {
     margin: 5%;
@@ -254,4 +270,16 @@ h2.app-title {
     min-height: 60vh;
     margin-bottom: 3rem;
   }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+@keyframes border-color-change {
+  0% { border-color: #e74c3c; border-top-color: transparent; }
+  33% { border-color: #16a085; border-top-color: transparent;}
+  66% { border-color: #9b59b6; border-top-color: transparent;}
+  100% { border-color: #e74c3c; border-top-color: transparent; }
 }

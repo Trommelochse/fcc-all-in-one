@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Loader.js';
 
 import axios from 'axios';
 import * as utils from './utils/utils.js'
@@ -64,7 +65,7 @@ class WeatherApp extends Component {
 
   render() {
 
-    if (!this.state.data) { return null }
+    if (!this.state.data) { return <Loader /> }
 
     const data = this.state.data;
     const windArrowStyle = {

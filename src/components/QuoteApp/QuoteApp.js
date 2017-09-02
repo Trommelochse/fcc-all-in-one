@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Loader.js';
 
 import axios from 'axios';
 
@@ -25,7 +26,7 @@ class QuoteApp extends Component {
   }
 
   render() {
-    if (!this.state.quote) { return null }
+    if (!this.state.quote) { return <Loader /> }
 
     const quote = this.state.quote;
     const tweetLink = `https://twitter.com/intent/tweet?hashtags=${quote.cat}&text="${quote.quote}" - ${quote.author}`;

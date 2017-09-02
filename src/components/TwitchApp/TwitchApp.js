@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Loader.js';
 import Streamer from './components/Streamer.js'
 
 import axios from 'axios';
@@ -50,7 +51,7 @@ class TwitchApp extends Component {
   }
 
   renderStreamers() {
-    if (!this.state.channels) {return null}
+    if (!this.state.channels) {return <Loader />}
     return (
       <div className="streamer-container">
         {this.state.channels.map(channel => <Streamer {...channel} key={channel._id}/>)}

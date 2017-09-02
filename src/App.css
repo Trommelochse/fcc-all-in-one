@@ -86,7 +86,7 @@ button {
 }
 
 .navbar-home:hover {
-  color:  #f39c12; 
+  color:  #f39c12;
 }
 
 .navbar-home > * {
@@ -95,7 +95,7 @@ button {
 
 .navbar-home i {
   padding: 0 0.5rem;
-  font-size: 2rem;
+  font-size: 1.85rem;
 }
 
 .navbar-title {
@@ -197,10 +197,14 @@ h2.app-title {
 }
 
 .info-container i, .info-container span {
-  font-size: 2.4rem;
+  font-size: 2.7rem;
 }
 
-.info-container > span, .info-container > a {
+.info-container .github-link:hover i {
+  color: #c0392b;
+}
+
+.info-container > span {
   display: block;
 }
 

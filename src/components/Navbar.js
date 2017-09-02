@@ -10,7 +10,7 @@ const Navbar = (props) => {
   return (
     <div className="Navbar" style={style}>
       <Link to="/" className="navbar-home">
-        <i className="ion-grid"></i>
+        <i className="fa fa-th" aria-hidden="true"></i>
         <span>All Apps</span>
       </Link>
       <div className="navbar-title">

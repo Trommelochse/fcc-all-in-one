@@ -14,9 +14,11 @@ class Streamer extends Component {
   }
 
   render() {
-
-    const streamStatus = this.props.stream ? this.props.stream.game : 'Offline';
-
+    const streamDescription = this.props.stream ? this.props.stream.game : 'Offline';
+    const onlineClass = this.props.stream ? 'active' : '';
+    console.log(this.props.stream);
+    const optionClasses = `${onlineClass} streamer-option`;
+    console.log(optionClasses);
     return (
       <div className="Streamer">
         <div className="streamer-logo">
@@ -25,8 +27,8 @@ class Streamer extends Component {
             alt={this.props.display_name} />
         </div>
         <div className="streamer-name">{this.props.display_name}</div>
-        <div className="streamer-status"><p>{streamStatus}</p></div>
-        <div className="streamer-option">
+        <div className="streamer-status"><p>{streamDescription}</p></div>
+        <div className={optionClasses}>
           {this.renderViewLink()}
         </div>
       </div>

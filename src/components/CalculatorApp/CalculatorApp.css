@@ -50,17 +50,17 @@
   height: 60px;
   font-size: 1.5em;
   background: #7f8c8d;
-  color: #fff;
+  color: #000;
   cursor: pointer;
 }
 
 #btn-equal {
   display: block;
   float: right;
-  width: 200px;
-  height: 80px;
+  width: 150px;
+  height: 60px;
   margin-top: 20px;
-  font-size: 4em;
+  font-size: 2.25em;
   border: 1px solid #d1d1d1;
   background: #7f8c8d;
   cursor: pointer;

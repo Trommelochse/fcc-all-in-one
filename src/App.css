@@ -49,7 +49,7 @@ a {
   color: inherit;
 }
 
-button {
+button, input, textarea {
   font-family: 'Roboto', Helvetica, sans-serif;
 }
 

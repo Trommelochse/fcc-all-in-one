@@ -16,9 +16,7 @@ class Streamer extends Component {
   render() {
     const streamDescription = this.props.stream ? this.props.stream.game : 'Offline';
     const onlineClass = this.props.stream ? 'active' : '';
-    console.log(this.props.stream);
     const optionClasses = `${onlineClass} streamer-option`;
-    console.log(optionClasses);
     return (
       <div className="Streamer">
         <div className="streamer-logo">

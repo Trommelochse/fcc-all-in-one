@@ -32,5 +32,11 @@ export const apps = [
     title: 'Simple calculator',
     description: 'Just a simple Javascript Calculator...',
     thumbUrl: 'http://clemensjanes.com/fcc-project/img/thumb-calculator.jpg'
+  },
+  {
+    name: 'pomodoro',
+    title: 'Pomodoro Cycle App',
+    description: 'Increase your productivity and focus by using this app!',
+    thumbUrl: 'http://clemensjanes.com/fcc-project/img/thumb-pomodoro.jpg'
   }
 ]

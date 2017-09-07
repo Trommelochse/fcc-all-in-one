@@ -36,7 +36,7 @@ class PomodoroApp extends Component {
           pomodorosCompleted: this.state.pomodorosCompleted + 1
         });
       }
-    }, 10);
+    }, 1000);
     this.setState({
       isRunning: true,
       pomodoroInterval

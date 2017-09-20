@@ -5,7 +5,7 @@
 - Wikipedia Viewer [x]
 - Twitch API [x]
 - Calculator [x]
-- Pomodoro [ ]
+- Pomodoro [x]
 - Tic Tac Toe [ ]
 - Simon Game [ ]
 - Markdown Preview [ ]

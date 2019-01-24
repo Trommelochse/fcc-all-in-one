@@ -1,4 +1,4 @@
-# All FCC Front End Projects in one ReactJS SPA
+# Free Code Camp Front End Projects @React
 
 - Random Quote Generator [x]
 - Local Weather App [x]
